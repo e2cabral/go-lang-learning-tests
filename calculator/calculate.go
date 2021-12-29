@@ -1,4 +1,4 @@
-package calculate
+package calculator
 
 import "math"
 

@@ -1,7 +1,7 @@
-package calculate_test
+package calculator_test
 
 import (
-	"test-bible/calculate"
+	"test-bible/calculator"
 	"testing"
 )
 
@@ -18,7 +18,7 @@ func TestCalculateIsArmstrong(t *testing.T) {
 			expected: true,
 		}
 
-		testCase.actual = calculate.CalculateIsArmstrong(testCase.value)
+		testCase.actual = calculator.CalculateIsArmstrong(testCase.value)
 		if testCase.actual != testCase.expected {
 			t.Fail()
 		}
@@ -30,7 +30,7 @@ func TestCalculateIsArmstrong(t *testing.T) {
 			expected: true,
 		}
 
-		testCase.actual = calculate.CalculateIsArmstrong(testCase.value)
+		testCase.actual = calculator.CalculateIsArmstrong(testCase.value)
 		if testCase.actual != testCase.expected {
 			t.Fail()
 		}
@@ -44,7 +44,7 @@ func TestNegativeCalculateIsArmstrong(t *testing.T) {
 			expected: false,
 		}
 
-		testCase.actual = calculate.CalculateIsArmstrong(testCase.value)
+		testCase.actual = calculator.CalculateIsArmstrong(testCase.value)
 		if testCase.actual != testCase.expected {
 			t.Fail()
 		}
@@ -56,7 +56,7 @@ func TestNegativeCalculateIsArmstrong(t *testing.T) {
 			expected: false,
 		}
 
-		testCase.actual = calculate.CalculateIsArmstrong(testCase.value)
+		testCase.actual = calculator.CalculateIsArmstrong(testCase.value)
 		if testCase.actual != testCase.expected {
 			t.Fail()
 		}
