@@ -38,13 +38,27 @@ func TestCalculateIsArmstrong(t *testing.T) {
 }
 
 func TestNegativeCalculateIsArmstrong(t *testing.T) {
-	testCase := TestCase{
-		value:    250,
-		expected: false,
-	}
+	t.Run("Should return false to 250", func(t *testing.T) {
+		testCase := TestCase{
+			value:    250,
+			expected: false,
+		}
 
-	testCase.actual = calculate.CalculateIsArmstrong(testCase.value)
-	if testCase.actual != testCase.expected {
-		t.Fail()
-	}
+		testCase.actual = calculate.CalculateIsArmstrong(testCase.value)
+		if testCase.actual != testCase.expected {
+			t.Fail()
+		}
+	})
+
+	t.Run("Should return false to 649", func(t *testing.T) {
+		testCase := TestCase{
+			value:    649,
+			expected: false,
+		}
+
+		testCase.actual = calculate.CalculateIsArmstrong(testCase.value)
+		if testCase.actual != testCase.expected {
+			t.Fail()
+		}
+	})
 }
