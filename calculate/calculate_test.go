@@ -12,15 +12,29 @@ type TestCase struct {
 }
 
 func TestCalculateIsArmstrong(t *testing.T) {
-	testCase := TestCase{
-		value:    371,
-		expected: true,
-	}
+	t.Run("Should return true for 371", func(t *testing.T) {
+		testCase := TestCase{
+			value:    371,
+			expected: true,
+		}
 
-	testCase.actual = calculate.CalculateIsArmstrong(testCase.value)
-	if testCase.actual != testCase.expected {
-		t.Fail()
-	}
+		testCase.actual = calculate.CalculateIsArmstrong(testCase.value)
+		if testCase.actual != testCase.expected {
+			t.Fail()
+		}
+	})
+
+	t.Run("Should return true for 153", func(t *testing.T) {
+		testCase := TestCase{
+			value:    153,
+			expected: true,
+		}
+
+		testCase.actual = calculate.CalculateIsArmstrong(testCase.value)
+		if testCase.actual != testCase.expected {
+			t.Fail()
+		}
+	})
 }
 
 func TestNegativeCalculateIsArmstrong(t *testing.T) {
